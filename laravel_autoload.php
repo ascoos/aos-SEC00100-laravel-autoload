@@ -74,7 +74,7 @@ use ASCOOS\OS\Kernel\{
 
 // <EN> Loading via Ascoos OS autoloader
 // <EL> Φόρτωση μέσω Ascoos OS autoloader
-global $conf, $AOS_LOGS_PATH, $AOS_LIBS_PATH, $utf8;
+global $conf, $AOS_LOGS_PATH, $AOS_LIBS_PATH;
 
 // <EN> Settings for logging and events to manage logs, reports, and event triggers
 // <EL> Ρυθμίσεις για logging και συμβάντα για τη διαχείριση logs, αναφορών και εκπομπής συμβάντων
@@ -125,6 +125,8 @@ try {
     // <EN> Diagnostic macro to check core services and DB connection
     // <EL> Διαγνωστικό macro για έλεγχο βασικών υπηρεσιών και σύνδεσης DB
     $macroHandler->addMacro(function () use ($laravel_app, $eventHandler) {
+        global $utf8;
+        
         try {
             // <EN> Verify Laravel app instance
             // <EL> Επαλήθευση instance της Laravel app
