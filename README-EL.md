@@ -90,7 +90,7 @@ $macroHandler->addMacro(function () use ($laravel_app, $eventHandler) {
     if (empty($missing)) {
         $eventHandler->logger->log("Laravel diagnostic passed", $eventHandler::DEBUG_LEVEL_INFO);
     } else {
-        $eventHandler->logger->log("Missing services: " . implode(', ', $missing), $eventHandler::DEBUG_LEVEL_WARN);
+        $eventHandler->logger->log("Missing services: " . implode(', ', $missing), $eventHandler::DEBUG_LEVEL_WARNING);
     }
 
     if ($laravel_app->bound('db')) {
