@@ -147,7 +147,7 @@ try {
                 $eventHandler->logger->log("Laravel diagnostic passed: all core services are available", $eventHandler::DEBUG_LEVEL_INFO);
                 $laravel_app->make('log')->info('Laravel diagnostic passed: all core services available');
             } else {
-                $eventHandler->logger->log("Laravel diagnostic warning: missing services → " . $utf8->implode(', ', $missing), $eventHandler::DEBUG_LEVEL_WARN);
+                $eventHandler->logger->log("Laravel diagnostic warning: missing services → " . $utf8->implode(', ', $missing), $eventHandler::DEBUG_LEVEL_WARNING);
                 $laravel_app->make('log')->warning('Laravel diagnostic warning: missing services → ' . $utf8->implode(', ', $missing));
             }
 
